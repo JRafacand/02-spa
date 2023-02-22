@@ -8,12 +8,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SrcheroeComponent {
   heroesb:any={};
-  //heroest:any={};
+  heroest:any={};
   constructor(private search:HeroesService,
               private activatedRoute: ActivatedRoute){
                 this.activatedRoute.params.subscribe(params=>{
-                //this.heroest=this._heroestService.getHeroe(params['id']);  
-                this.heroesb=this.search.buscarHeroes(params['id']);
+                this.heroest=params['term'];
+               //this.heroest=this._heroestService.getHeroe(params['id']);  
+                this.heroesb=this.search.buscarHeroes(params['term']);
                   console.log(this.heroesb,'heroesb');
                   console.log(params,'params');
                 })
