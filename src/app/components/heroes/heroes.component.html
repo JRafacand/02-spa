@@ -2,8 +2,8 @@
 <hr>
 <!--*ngFor="let heroe of heroes; let i = index"implementando imput-->
 <div class="row row-cols-4 row-cols-md-4 g-5 animated fadeIn">
-  
-          <app-heroe-tarjeta [heroe]=heroe [flecha]="i" *ngFor="let heroe of heroes; let i = index">
+          <!--aqui para invocar el evento lo incluyo similiar al evento (clic) solo que ahor invoco heroSelec-->
+          <app-heroe-tarjeta (heroeSelec)="verHeroe($event)"[heroe]=heroe [flecha]="i" *ngFor="let heroe of heroes; let i = index">
             <div class="col">
               <div class="card">
               </div>

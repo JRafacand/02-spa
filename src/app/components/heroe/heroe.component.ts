@@ -13,7 +13,8 @@ export class HeroeComponent {
               private _heroesService:HeroesService){
     this.activatedRoute.params.subscribe(params=>{
       //console.log(params['id']);//este id viene del rpute la variable que se utilizp
-    this.heroe=this._heroesService.getHeroe(params['id']);
+    console.log(this.heroe,'heroe');
+      this.heroe=this._heroesService.getHeroe(params['id']);
       console.log(this.heroe.nombre);
       console.log(params,'params');
           })//con esto me suscribo a utilizar mi activatedRoute

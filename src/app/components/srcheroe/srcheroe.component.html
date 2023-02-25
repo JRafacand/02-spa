@@ -1,5 +1,6 @@
 <div class="row row-cols-4 row-cols-md-4 g-5 animated fadeIn">
-    <app-heroe-tarjeta [heroe]=heroe [flecha]="i" *ngFor="let heroe of heroesb; let i = index">
+  <!--aqui debo invocar la variable idx-->
+    <app-heroe-tarjeta [heroe]=heroe [flecha]="heroe.idx" *ngFor="let heroe of heroesb; let i = index">
       <div class="col">
         <div class="card">
         </div>
